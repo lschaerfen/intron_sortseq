@@ -1,0 +1,14 @@
+#### CONFIG ####
+DATAPATH:           "../../data/fastq/"
+SAMPLES:            "../../config/samples_example.csv"
+OUTPUTPATH:         "../../data/results/"
+
+LIB_FASTA:          "../../config/fasta_files/random_lib_clust.fasta"
+READ_LEN:           151
+MINREADLENGTH:      20
+THREADS:            15
+
+#### TOOLS ####
+BWA:                "bwa"
+SAMTOOLS:           "samtools"
+FASTP:              "fastp"

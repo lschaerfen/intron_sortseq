@@ -1,0 +1,15 @@
+﻿bin_ID,fcs,pkl
+input,/,../data/counts/5ss_stem_MYC_input_counts.pkl
+pos_1,../data/fcs/5ss_stem_MYC/5ss_stem_MYC_pos_1.fcs,
+pos_2,../data/fcs/5ss_stem_MYC/5ss_stem_MYC_pos_2.fcs,
+pos_3,../data/fcs/5ss_stem_MYC/5ss_stem_MYC_pos_3.fcs,
+neg_1,../data/fcs/5ss_stem_MYC/5ss_stem_MYC_neg_1.fcs,
+neg_2,../data/fcs/5ss_stem_MYC/5ss_stem_MYC_neg_2.fcs,
+bin_1,../data/fcs/5ss_stem_MYC/5ss_stem_MYC_bin01.fcs,../data/counts/5ss_stem_MYC_bin01_counts.pkl
+bin_2,../data/fcs/5ss_stem_MYC/5ss_stem_MYC_bin02.fcs,../data/counts/5ss_stem_MYC_bin02_counts.pkl
+bin_3,../data/fcs/5ss_stem_MYC/5ss_stem_MYC_bin03.fcs,../data/counts/5ss_stem_MYC_bin03_counts.pkl
+bin_4,../data/fcs/5ss_stem_MYC/5ss_stem_MYC_bin04.fcs,../data/counts/5ss_stem_MYC_bin04_counts.pkl
+bin_5,../data/fcs/5ss_stem_MYC/5ss_stem_MYC_bin05.fcs,../data/counts/5ss_stem_MYC_bin05_counts.pkl
+bin_6,../data/fcs/5ss_stem_MYC/5ss_stem_MYC_bin06.fcs,../data/counts/5ss_stem_MYC_bin06_counts.pkl
+bin_7,../data/fcs/5ss_stem_MYC/5ss_stem_MYC_bin07.fcs,../data/counts/5ss_stem_MYC_bin07_counts.pkl
+bin_8,../data/fcs/5ss_stem_MYC/5ss_stem_MYC_bin08.fcs,../data/counts/5ss_stem_MYC_bin08_counts.pkl
