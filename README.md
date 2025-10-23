@@ -18,7 +18,7 @@ conda activate sort_env # activate
 pip install -e .
 ```
 
-## Re-generating analyses and figures from "Rapid folding of nascent RNA regulates eukaryotic RNA biogenesis"
+## Re-generating analyses and figures from "Control of gene output by intronic RNA structure"
 To re-generate the analyses, either run the analysis pipeline on deposited raw data, or download processed files from GEO accession number [GSE308590](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE308590). Save the raw or processed data files in the `data` directory in the respective folder. If starting from raw data, execute the Snakemake pipeline:
 
 ```bash
