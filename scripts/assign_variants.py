@@ -60,8 +60,7 @@ def count_variants_naive_PE(fastq_R1, fastq_R2, variants, primer_len=20, read_le
     # crop to read len minus primer
     variants_cropped = [var[:read_len-primer_len] + var[-(read_len-primer_len):] for var in variants]
     cropped_dict = dict(zip(variants_cropped, variants)) # retain original sequence and cropped identity
-    variants_cropped = set(variants_cropped)
-    
+    variants_cropped = set(variants_cropped)    
 
     # no two cropped seqs can be the same
     assert len(variants_cropped) == len(variants), "At least two sequences cannot be unambiguously assigned."
@@ -108,12 +107,13 @@ if __name__ == "__main__":
     fastq_R2 = args.b
     variants = load_fasta(fasta_file)
 
-    counts_m, orphans_m = count_variants_naive(fastq, variants)
-    counts_p, orphans_p = count_variants_naive_PE(fastq_R1, fastq_R2, variants, primer_len=args.primer_len, read_len=args.read_len)
+    counts, orphans = count_variants_naive(fastq, variants)
+    if len(variants[0]) > args.read_len:
+        counts_p, orphans_p = count_variants_naive_PE(fastq_R1, fastq_R2, variants, primer_len=args.primer_len, read_len=args.read_len)
 
-    # add together
-    orphans = orphans_m + orphans_p
-    counts = {k: counts_m.get(k, 0) + counts_p.get(k, 0) for k in counts_m.keys() & counts_p.keys()}
+        # add together
+        orphans = orphans + orphans_p
+        counts = {k: counts.get(k, 0) + counts_p.get(k, 0) for k in counts.keys() & counts_p.keys()}
 
     n_ass = np.sum(list(counts.values()))
     print(f"{n_ass + orphans} reads processed. {100*n_ass/(n_ass+orphans):.1f}% assigned to variants.")
