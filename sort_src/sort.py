@@ -203,11 +203,11 @@ class SORT():
     def plot_hists(self, axs, scaled=False):
         if not scaled:
             for i in self.order:
-                axs.bar(self.bins[:-1]+0.5*self.bin_size, self.bin_hists[i], self.bin_size, color='orange', alpha=0.3)
+                axs.bar(self.bins[:-1]+0.5*self.bin_size, self.bin_hists[i], self.bin_size, alpha=0.3)
                 axs.plot(self.bins[:-1]+0.5*self.bin_size, self.bin_hists[i], color='gray', alpha=0.5)
         else:
             for idx, i in enumerate(self.order):
-                axs.bar(self.bins[:-1]+0.5*self.bin_size, self.contributions_seq[idx]*self.bin_hists[i], self.bin_size, color='orange', alpha=0.3)
+                axs.bar(self.bins[:-1]+0.5*self.bin_size, self.contributions_seq[idx]*self.bin_hists[i], self.bin_size, alpha=0.3)
                 axs.plot(self.bins[:-1]+0.5*self.bin_size, self.contributions_seq[idx]*self.bin_hists[i], color='gray', alpha=0.5)
 
             axs.plot(self.bins[:-1]+0.5*self.bin_size, np.sum([self.contributions_seq[idx]*self.bin_hists[i] for idx, i in enumerate(self.order)], axis=0), '--k')

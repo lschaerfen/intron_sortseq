@@ -1,5 +1,5 @@
 # intron_sortseq
-Analysis pipeline and downstream processing for study titled "Control of gene output by intronic RNA structure". Includes processing of Sort-seq flow cytometry and sequencing data, as well as code to reproduce manuscript figures.
+Analysis pipeline and downstream processing for study titled "Control of gene output by intron RNA structure". Includes processing of Sort-seq flow cytometry and sequencing data, as well as code to reproduce manuscript figures.
 
 ## Installing the package
 
@@ -23,7 +23,7 @@ To re-generate the analyses, either run the analysis pipeline on deposited raw d
 
 ```bash
 conda activate CoST
-snakemake -c 16 -d smk_rundir/run --configfile config/snake_sort.yaml --resources mem_mb=32000 --rerun-incomplete --use-conda
+snakemake -c 16 -d smk_rundir/run --configfile config/snake_sort.yaml
 ```
 
 Analysis code for each individual figure is available in jupyter notebooks in the `notebooks` directory and can be executed directly using the processed data from GEO.

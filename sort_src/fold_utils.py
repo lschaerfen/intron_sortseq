@@ -38,6 +38,14 @@ def vienna_all_metrics(seq, temp=30.0):
 
     return(pp[1:], dbr_mea, mea, dbr_mfe, mfe, dbr_efe, efe, p_mfe, ent[1:], ed)
 
+def vienna_bp_prob(seq, temp=30.0):
+    md = RNA.md()
+    md.temperature = temp
+    fc = RNA.fold_compound(seq, md)
+    fc.pf()
+    ma = fc.bpp()
+    return(ma)
+
 def get_all_metrics(variants, n_cpu=1, temp=30.0):
     
     vienna = []
