@@ -15,7 +15,7 @@ dependencies:
   - biopython
   - cmap
   - pip:
-      - polar
+      - polars
       - flowkit
       - mavenn
       - vcf_parser
