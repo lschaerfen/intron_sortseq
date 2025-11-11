@@ -22,7 +22,7 @@ pip install -e .
 To re-generate the analyses, either run the analysis pipeline on deposited raw data, or download processed files from GEO accession number [GSE308590](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE308590). Save the raw or processed data files in the `data` directory in the respective folder. If starting from raw data, execute the Snakemake pipeline:
 
 ```bash
-conda activate CoST
+conda activate sort_env
 snakemake -c 16 -d smk_rundir/run --configfile config/snake_sort.yaml
 ```
 
